@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Gómez | Data Scientist Portfolio</title>
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0f172a; /* Midnight Blue */
+            --secondary: #334155;
+            --accent: #3b82f6; /* Action Blue */
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav a { text-decoration: none; color: var(--secondary); font-weight: 500; margin-left: 20px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        header {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+        }
+        header h1 { font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
+        header p { font-size: 1.25rem; color: var(--secondary); font-weight: 300; max-width: 700px; margin: 0 auto 25px; }
+        
+        .social-links a {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+        .social-links a:hover { color: var(--accent); }
+
+        /* Sections */
+        section { padding: 60px 0; }
+        h2 { font-size: 1.8rem; margin-bottom: 30px; border-left: 4px solid var(--accent); padding-left: 15px; color: var(--primary); }
+
+        /* Experience & Education Cards */
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary); margin-bottom: 5px; }
+        .card .meta { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 15px; }
+        .card ul { list-style: none; }
+        .card ul li { margin-bottom: 10px; position: relative; padding-left: 20px; }
+        .card ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-category { background: #edf2f7; padding: 20px; border-radius: 8px; }
+        .skill-category h4 { margin-bottom: 10px; color: var(--primary); }
+        .skill-tag {
+            display: inline-block;
+            background: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin: 3px;
+            font-size: 0.85rem;
+            border: 1px solid #cbd5e1;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .btn-cv {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            nav .container { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div style="font-weight: 700; color: var(--primary);">AG.DATA</div>
+            <div class="nav-links">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#habilidades">Skills</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Alejandro Gómez</h1>
+            <p>Matemático & Científico de Datos especializado en Inteligencia Artificial y Automatización de Procesos Críticos.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/alejogomeza" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:a.gomeza@hotmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+573014917036"><i class="fas fa-phone"></i></a>
+            </div>
+            <a href="#" class="btn-cv">Descargar CV <i class="fas fa-file-download"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Matemático y científico de datos con sólida experiencia en análisis avanzado y desarrollo de soluciones basadas en Machine Learning. Experto en implementación de modelos predictivos, automatización mediante Python (Selenium/Regex) y arquitectura de datos en entornos cloud (Databricks).</p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia Destacada</h2>
+            
+            <div class="card">
+                <h3>Líder Científico de Datos</h3>
+                <div class="meta">Tecser&Cloud SAS | Mar 2025 - Oct 2025</div>
+                <ul>
+                    <li>Lideré la integración de múltiples fuentes de datos mediante procesos ETL en <strong>Azure Databricks</strong>.</li>
+                    <li>Diseñé y construí tableros en Power BI para la toma de decisiones estratégicas.</li>
+                    <li>Definición de modelos de datos escalables alineados con requerimientos de negocio.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Compliance Analyst</h3>
+                <div class="meta">Credicorp Capital LLC | Sep 2024 - Mar 2025</div>
+                <ul>
+                    <li>Optimización de recolección de datos mediante <strong>Web Scraping (Selenium)</strong>.</li>
+                    <li>Procesamiento de archivos PDF con Python/Regex alcanzando una <strong>precisión del 98%</strong>.</li>
+                    <li>Identificación de patrones transaccionales sospechosos para cumplimiento normativo.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Analista de Cumplimiento</h3>
+                <div class="meta">Acciones & Valores | Jun 2022 - Sep 2024</div>
+                <ul>
+                    <li>Desarrollo de scripts en Python para generación automática de reportes de riesgo.</li>
+                    <li>Entrenamiento de modelos de <strong>Machine Learning (Clustering)</strong> para detección de fraudes.</li>
+                    <li>Generación de insights accionables que mejoraron la respuesta ante riesgos financieros.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programación</h4>
+                    <span class="skill-tag">Python (Pandas, Scikit-learn)</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">Regex</span>
+                </div>
+                <div class="skill-category">
+                    <h4>Datos & Cloud</h4>
+                    <span class="skill-tag">SQL (Oracle, SQLServer)</span>
+                    <span class="skill-tag">Azure Databricks</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+                <div class="skill-category">
+                    <h4>AI & Analytics</h4>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">LLM Fine-tuning</span>
+                    <span class="skill-tag">Power BI</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="estudios">
+            <h2>Educación</h2>
+            <div class="card">
+                <h3>Maestría en Analítica de Datos</h3>
+                <p>Universidad Central | 2023 - Actualidad</p>
+            </div>
+            <div class="card">
+                <h3>Matemático</h3>
+                <p>Universidad Distrital Francisco José de Caldas | 2021</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer id="contacto">
+        <div class="container">
+            <p>¿Interesado en colaborar o contratarme?</p>
+            <p style="margin-top:10px;">Bogotá D.C. | a.gomeza@hotmail.com</p>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="#" style="color: white;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: white;"><i class="fab fa-github"></i></a>
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 30px;">© 2025 Alejandro Gómez - Data Scientist</p>
+        </div>
+    </footer>
+
+</body>
+</html>
