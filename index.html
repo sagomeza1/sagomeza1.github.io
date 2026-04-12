@@ -4,131 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejandro Gómez | Data Scientist Portfolio</title>
-    <!-- Google Fonts & Icons -->
+    <meta name="description" content="Portfolio de Alejandro Gómez — Matemático y Científico de Datos especializado en Machine Learning, automatización con Python y arquitectura de datos en la nube.">
+    <meta name="author" content="Alejandro Gómez">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Alejandro Gómez | Data Scientist Portfolio">
+    <meta property="og:description" content="Matemático y Científico de Datos especializado en IA, Machine Learning y automatización de procesos críticos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sagomeza1.github.io/">
+    <meta property="og:locale" content="es_CO">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Alejandro Gómez | Data Scientist Portfolio">
+    <meta name="twitter:description" content="Matemático y Científico de Datos especializado en IA, Machine Learning y automatización de procesos críticos.">
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary: #0f172a; /* Midnight Blue */
-            --secondary: #334155;
-            --accent: #3b82f6; /* Action Blue */
-            --bg: #f8fafc;
-            --text: #1e293b;
-            --white: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav a { text-decoration: none; color: var(--secondary); font-weight: 500; margin-left: 20px; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
-
-        /* Hero Section */
-        header {
-            padding: 80px 0;
-            text-align: center;
-            background: var(--white);
-            border-bottom: 1px solid #e2e8f0;
-        }
-        header h1 { font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
-        header p { font-size: 1.25rem; color: var(--secondary); font-weight: 300; max-width: 700px; margin: 0 auto 25px; }
-        
-        .social-links a {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-        .social-links a:hover { color: var(--accent); }
-
-        /* Sections */
-        section { padding: 60px 0; }
-        h2 { font-size: 1.8rem; margin-bottom: 30px; border-left: 4px solid var(--accent); padding-left: 15px; color: var(--primary); }
-
-        /* Experience & Education Cards */
-        .card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #e2e8f0;
-            transition: 0.3s;
-        }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--primary); margin-bottom: 5px; }
-        .card .meta { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 15px; }
-        .card ul { list-style: none; }
-        .card ul li { margin-bottom: 10px; position: relative; padding-left: 20px; }
-        .card ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .skill-category { background: #edf2f7; padding: 20px; border-radius: 8px; }
-        .skill-category h4 { margin-bottom: 10px; color: var(--primary); }
-        .skill-tag {
-            display: inline-block;
-            background: var(--white);
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin: 3px;
-            font-size: 0.85rem;
-            border: 1px solid #cbd5e1;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 40px;
-        }
-        .btn-cv {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-weight: 600;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            nav .container { flex-direction: column; gap: 15px; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- SVG Icon Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+        <symbol id="icon-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 512 512"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></symbol>
+        <symbol id="icon-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+    </svg>
+
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
     <nav>
         <div class="container">
-            <div style="font-weight: 700; color: var(--primary);">AG.DATA</div>
+            <div class="nav-logo">AG.DATA</div>
             <div class="nav-links">
                 <a href="#sobre-mi">Sobre mí</a>
                 <a href="#experiencia">Experiencia</a>
@@ -143,15 +52,15 @@
             <h1>Alejandro Gómez</h1>
             <p>Matemático & Científico de Datos especializado en Inteligencia Artificial y Automatización de Procesos Críticos.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/alejogomeza" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:a.gomeza@hotmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+573014917036"><i class="fas fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/alejogomeza" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn"><svg class="icon"><use href="#icon-linkedin"/></svg></a>
+                <a href="mailto:a.gomeza@hotmail.com" aria-label="Enviar correo electrónico"><svg class="icon"><use href="#icon-envelope"/></svg></a>
+                <a href="tel:+573014917036" aria-label="Llamar por teléfono"><svg class="icon"><use href="#icon-phone"/></svg></a>
             </div>
-            <a href="#" class="btn-cv">Descargar CV <i class="fas fa-file-download"></i></a>
+            <a href="https://www.linkedin.com/in/alejogomeza" target="_blank" rel="noopener noreferrer" class="btn-cv">Descargar CV <svg class="icon icon-inline"><use href="#icon-download"/></svg></a>
         </div>
     </header>
 
-    <div class="container">
+    <main id="contenido-principal" class="container">
         
         <section id="sobre-mi">
             <h2>Sobre mí</h2>
@@ -228,17 +137,17 @@
             </div>
         </section>
 
-    </div>
+    </main>
 
     <footer id="contacto">
         <div class="container">
             <p>¿Interesado en colaborar o contratarme?</p>
-            <p style="margin-top:10px;">Bogotá D.C. | a.gomeza@hotmail.com</p>
-            <div class="social-links" style="margin-top: 20px;">
-                <a href="#" style="color: white;"><i class="fab fa-linkedin"></i></a>
-                <a href="#" style="color: white;"><i class="fab fa-github"></i></a>
+            <p class="footer-contact">Bogotá D.C. | a.gomeza@hotmail.com</p>
+            <div class="social-links footer-social">
+                <a href="https://www.linkedin.com/in/alejogomeza" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn"><svg class="icon"><use href="#icon-linkedin"/></svg></a>
+                <a href="https://github.com/sagomeza1" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub"><svg class="icon"><use href="#icon-github"/></svg></a>
             </div>
-            <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 30px;">© 2026 Alejandro Gómez - Data Scientist</p>
+            <p class="footer-copyright">© 2026 Alejandro Gómez - Data Scientist</p>
         </div>
     </footer>
 
