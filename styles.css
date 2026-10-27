@@ -144,6 +144,7 @@ header h1 {
 .social-links a:hover { color: var(--accent); background: var(--surface); }
 
 .icon { width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em; }
+.icon-inline { width: 0.9em; height: 0.9em; margin-left: 4px; }
 .social-links .icon { width: 1.15rem; height: 1.15rem; }
 
 /* Sections */
